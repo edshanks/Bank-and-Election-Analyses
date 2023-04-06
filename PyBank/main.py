@@ -85,3 +85,53 @@ print("")
 min_date = PL_change.index(min(PL_change))      #finds date that corresponds to max profit
 print(f"Greatest Decrease in Profits: {PL_change_date[min_date]} (${min(PL_change)})")
 
+
+################################################################################################
+
+
+#writes results onto new text file
+output_path = os.path.join("Analysis", "bank_results.txt")
+
+with open(output_path, 'w') as textfile:
+    
+
+   
+    textfile.writelines("Financial Anaysis:")
+    textfile.writelines('\n')
+    textfile.writelines("")
+    textfile.writelines('\n')
+    textfile.writelines("---------------------------")
+    textfile.writelines('\n')
+    textfile.writelines("")
+    textfile.writelines('\n')
+
+    textfile.writelines(f"Total Months: {months_count}")          #prints total months
+    textfile.writelines('\n')
+    textfile.writelines("")
+    textfile.writelines('\n')
+    textfile.writelines(f"Total: ${PL}")                          #prints total profit
+    textfile.writelines('\n')
+    textfile.writelines("")
+    textfile.writelines('\n')
+
+    textfile.writelines(f"Average Change: ${round(average, 2)}")  #calculates average change in profit
+    textfile.writelines('\n')
+    textfile.writelines("")
+    textfile.writelines('\n')
+
+    max_date = PL_change.index(max(PL_change))      #finds date that corresponds to min profit
+    textfile.writelines(f"Greatest Increase in Profits: {PL_change_date[max_date]} (${max(PL_change)})")
+    textfile.writelines('\n')
+    textfile.writelines("")
+    textfile.writelines('\n')
+    
+    min_date = PL_change.index(min(PL_change))      #finds date that corresponds to max profit
+    textfile.writelines(f"Greatest Decrease in Profits: {PL_change_date[min_date]} (${min(PL_change)})")
+
+
+    
+
+
+
+
+
